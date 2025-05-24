@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    color: rgb(212, 212, 212);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #5c40ac, #9c1b57);
+    min-height: 100vh;
+    display: flex;
+}
+
+.bg-dark-transparent {
+    background-color: rgba(34, 34, 34, 0.75);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 220px;
+    background-color: #0f0433c7;
+    padding-top: 5%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-item {
+    width: 80%; 
+    text-align: center;
+}
+
+.sidebar .btn {
+    width: 100%;
+    color: #66fcf1;
+    border-color: #66fcf1;
+    transition: all 0.3s ease;
+}
+
+.sidebar .btn:hover,
+.sidebar .btn:focus {
+    background-color: #66fcf1;
+    color: #0f0433;
+    border-color: #66fcf1;
+    box-shadow: 0 0 10px rgba(102, 252, 241, 0.6);
+}
+
+.main-content {
+    margin-left: 230px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.1); opacity: 0.8; }
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+
+.proyecto {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: #66d1fc !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.proyecto:hover {
+    transform: translateY(-5px);
+}
+
+.proyecto h3 {
+    color: #66fcf1;
+    margin-bottom: 10px;
+}
+
+.list-unstyled li {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-unstyled li i {
+    color: #66fcf1; 
+    margin-bottom: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.list-unstyled li i:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) { 
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+        border-bottom: 1px solid #66fcf1;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .sidebar .col-md-10 {
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .sidebar img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .sidebar .nav {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    .sidebar .nav-item {
+        margin-bottom: 0;
+        margin-right: 10px; 
+        width: auto; 
+    }
+
+    .sidebar .nav-item:last-child {
+        margin-right: 0;
+    }
+
+    .sidebar .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .mi-circulo {
+        width: 70px;
+        height: 70px;
+        top: 20px;
+        right: 20px;
+        filter: blur(15px);
+    }
+
+    .card-body {
+        margin-left: 0 !important; 
+        text-align: center !important;
+    }
+
+    .list-unstyled {
+        gap: 20px !important;
+    }
+
+    h2, h3 {
+        font-size: 1.8rem; 
+    }
+
+    .lead {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 576px) { 
+    .sidebar .nav-item {
+        margin-right: 5px;
+    }
+
+    .sidebar .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .mi-circulo {
+        width: 50px;
+        height: 50px;
+        top: 10px;
+        right: 10px;
+        filter: blur(10px);
+    }
+}
+
+
+.btn-linkedin {
+    background-color: #0076b5b4;
+    border-color: #0077B5;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-linkedin:hover {
+    background-color: #005a8f;
+    border-color: #005a8f;
+    box-shadow: 0 0 10px rgba(0, 119, 181, 0.5);
+}
+
+.btn-github {
+    background-color: #333;
+    border-color: #222222;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-github:hover {
+    background-color: #000;
+    border-color: #000;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
